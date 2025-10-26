@@ -3,32 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Litosfer | Geografi XI</title>
+  <title>Litosfer | Media Pembelajaran Geografi XI</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; margin: 0; color: #1e293b; }
-    nav { background-color: #1e40af; color: white; padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; }
-    nav a { color: white; text-decoration: none; margin: 0 10px; }
-    nav a:hover { text-decoration: underline; }
-    .container { padding: 50px 20px; max-width: 900px; margin: auto; text-align: justify; }
-    h1 { color: #1e40af; text-align: center; }
-    img { width: 100%; border-radius: 12px; margin: 20px 0; }
-    a.button { background: #1e40af; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; display: inline-block; margin-top: 20px; }
-    a.button:hover { background: #3749c0; }
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    nav {
+      background-color: #1e40af;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+    }
+    nav .logo { font-weight: bold; font-size: 20px; }
+    nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+    nav ul li a:hover { text-decoration: underline; }
+
+    .hero {
+      background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.85)), 
+                  url('../img/litosfer.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 { font-size: 34px; }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+    .content h2 { color: #1e40af; }
+    .content img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    footer {
+      background-color: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
   <nav>
-    <div><strong>🌏 Geografi XI</strong></div>
-    <div><a href="../index.html">Beranda</a> | <a href="../materi.html">Materi</a></div>
+    <div class="logo">🌏 Geografi XI</div>
+    <ul>
+      <li><a href="../index.html">Beranda</a></li>
+      <li><a href="../materi.html">Materi</a></li>
+      <li><a href="../peta-konsep.html">Peta Konsep</a></li>
+      <li><a href="../kuis.html">Kuis</a></li>
+      <li><a href="../projek.html">Projek</a></li>
+      <li><a href="../tentang.html">Tentang</a></li>
+    </ul>
   </nav>
 
-  <div class="container">
-    <h1>Litosfer</h1>
-    <img src="../img/gunung.jpg" alt="Litosfer">
-    <p>Litosfer adalah lapisan padat paling luar dari bumi yang terdiri atas kerak bumi dan bagian atas mantel. Litosfer mencakup benua, dasar laut, serta gunung dan lembah yang membentuk permukaan bumi.</p>
-    <p>Proses utama yang membentuk litosfer antara lain adalah tektonisme, vulkanisme, dan seisme. Ketiga proses ini berpengaruh besar terhadap bentuk muka bumi dan kondisi lingkungan di permukaannya.</p>
-    <a class="button" href="../materi.html">⬅️ Kembali ke Materi</a>
-  </div>
+  <section class="hero">
+    <h1>Bab 1 — Litosfer</h1>
+    <p>Memahami Lapisan Bumi dan Dinamika Pembentuk Permukaan</p>
+  </section>
+
+  <section class="content">
+    <h2>Pengertian Litosfer</h2>
+    <p>
+      Litosfer adalah lapisan paling luar dari bumi yang tersusun atas batuan padat dan tanah. 
+      Lapisan ini meliputi kerak bumi dan bagian atas mantel bumi yang kaku. 
+      Ketebalan litosfer berkisar antara 50 hingga 100 km dan terdiri atas lempeng-lempeng besar yang saling bergerak.
+    </p>
+
+    <img src="../img/lapisan-bumi.jpg" alt="Struktur Litosfer">
+
+    <h2>Dinamika Litosfer</h2>
+    <p>
+      Pergerakan lempeng tektonik menyebabkan berbagai fenomena geosfer seperti gempa bumi, gunung api, dan pembentukan pegunungan. 
+      Aktivitas vulkanisme dan seisme merupakan bagian penting dalam memahami dinamika litosfer di permukaan bumi.
+    </p>
+
+    <h2>Manfaat dan Dampak</h2>
+    <p>
+      Litosfer menyediakan sumber daya alam seperti mineral, batu bara, dan minyak bumi. 
+      Namun, eksploitasi berlebihan dapat menyebabkan kerusakan lingkungan seperti tanah longsor dan erosi.
+    </p>
+
+    <p><a href="../materi.html" style="color:#1e40af; font-weight:600;">← Kembali ke Daftar Materi</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Media Pembelajaran Geografi XI | SMA Negeri 1 Purwoharjo</p>
+  </footer>
 </body>
 </html>
