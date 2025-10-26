@@ -4,254 +4,259 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Media Pembelajaran Geografi Kelas XI | SMA Negeri 1 Purwoharjo</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== RESET & FONT ===== */
+    /* ===== RESET ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    html, body {
+      scroll-behavior: smooth;
+      transition: background 0.6s, color 0.6s;
+    }
+
+    /* ===== BODY BASE ===== */
     body {
-      font-family: "Poppins", sans-serif;
-      background-color: #f9fafb;
+      font-family: "Outfit", "Poppins", sans-serif;
+      background: linear-gradient(145deg, #eef2ff, #dbeafe);
       color: #1e293b;
-      line-height: 1.6;
-      transition: background 0.4s, color 0.4s;
+      overflow-x: hidden;
+    }
+    body.dark {
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      color: #e2e8f0;
     }
 
     /* ===== NAVBAR ===== */
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 1000;
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      backdrop-filter: blur(14px);
+      background: rgba(30, 64, 175, 0.85);
+      color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 40px;
-      color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: background 0.4s;
+      padding: 14px 50px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: background 0.5s, box-shadow 0.5s;
     }
+    body.dark nav {
+      background: rgba(15, 23, 42, 0.8);
+    }
+
     .logo {
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
-    /* ===== DARK MODE BUTTON ===== */
-    .theme-toggle {
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 1.3rem;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .theme-toggle:hover {
-      transform: rotate(20deg);
-    }
-
-    /* ===== MENU ===== */
     nav ul {
-      display: flex;
-      gap: 25px;
       list-style: none;
+      display: flex;
+      gap: 30px;
     }
-
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: all 0.3s;
+      position: relative;
     }
-    nav ul li a:hover {
-      color: #fde047;
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #fde047;
+      transition: width 0.3s;
     }
-
-    /* ===== MENU MOBILE ===== */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .bar {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      transition: 0.4s;
+    nav ul li a:hover::after {
+      width: 100%;
     }
 
-    @media (max-width: 768px) {
-      nav ul {
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 100%;
-        background: #1e3a8a;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-      }
-      nav ul.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
-    /* ===== HEADER ===== */
-    .header {
-      text-align: center;
-      padding: 50px 20px 20px;
-    }
-    .header img {
-      width: 130px;
-      height: 160px;
+    .theme-toggle {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
       border-radius: 50%;
-      border: 4px solid #2563eb;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(37,99,235,0.4);
-      transition: transform 0.3s;
+      width: 40px;
+      height: 40px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: 0.4s;
+      backdrop-filter: blur(8px);
     }
-    .header img:hover {
-      transform: scale(1.05);
-    }
-    .header h2 {
-      margin-top: 15px;
-      color: #1e40af;
-      font-weight: 700;
-    }
-    .header p {
-      color: #64748b;
-      font-size: 0.95rem;
+    .theme-toggle:hover {
+      transform: rotate(30deg) scale(1.1);
+      background: rgba(253,224,71,0.25);
     }
 
     /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 64, 175, 0.85)),
+      height: 100vh;
+      background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(15,23,42,0.8)),
                   url('img/hero-geografi.jpg') center/cover no-repeat;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 120px 20px;
-      animation: fadeIn 1s ease-in-out;
+      padding: 0 20px;
+      animation: fadeIn 1.2s ease-out;
     }
     .hero h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      max-width: 800px;
       font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.3;
     }
     .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-top: 15px;
+      opacity: 0.9;
     }
     .hero a {
-      background: #fde047;
+      margin-top: 35px;
+      padding: 14px 36px;
+      background: linear-gradient(135deg, #fde047, #facc15);
       color: #1e293b;
-      padding: 12px 28px;
-      border-radius: 10px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 18px rgba(253, 224, 71, 0.4);
+      transition: all 0.4s;
     }
     .hero a:hover {
-      background: #facc15;
-      transform: translateY(-3px);
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(253, 224, 71, 0.6);
     }
+
+    /* ===== HEADER (PENGEMBANG) ===== */
+    .header {
+      text-align: center;
+      margin-top: 100px;
+      padding: 50px 20px;
+    }
+    .header img {
+      width: 150px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #facc15;
+      box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+      object-fit: cover;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+    .header img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(250, 204, 21, 0.8);
+    }
+    .header h2 {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      color: #1e40af;
+    }
+    .header p {
+      color: #475569;
+    }
+    body.dark .header h2 { color: #93c5fd; }
+    body.dark .header p { color: #cbd5e1; }
 
     /* ===== CONTENT ===== */
     .content {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 900px;
       margin: auto;
-      animation: slideUp 1s ease-in-out;
     }
     .content h2 {
+      font-size: 2rem;
       color: #1e40af;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
+    }
+    .content h2::after {
+      content: "";
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb, #facc15);
+      position: absolute;
+      bottom: -10px;
+      left: 20%;
+      border-radius: 4px;
     }
     .content p {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: #334155;
       margin-bottom: 20px;
     }
+    body.dark .content h2::after { background: linear-gradient(90deg, #93c5fd, #fde047); }
 
     /* ===== FOOTER ===== */
     footer {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      background: rgba(30, 64, 175, 0.9);
       color: white;
       text-align: center;
-      padding: 25px 20px;
-      font-size: 0.9rem;
-      margin-top: 50px;
+      padding: 35px 20px;
+      font-size: 0.95rem;
+      margin-top: 70px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 -8px 20px rgba(0,0,0,0.15);
+    }
+    body.dark footer {
+      background: rgba(15, 23, 42, 0.9);
     }
 
     /* ===== ANIMASI ===== */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideUp {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===== DARK MODE STYLE ===== */
-    body.dark {
-      background-color: #0f172a;
-      color: #e2e8f0;
-    }
-    body.dark nav {
-      background: linear-gradient(135deg, #111827, #1e293b);
-    }
-    body.dark .header h2 {
-      color: #93c5fd;
-    }
-    body.dark .content h2 {
-      color: #93c5fd;
-    }
-    body.dark footer {
-      background: linear-gradient(135deg, #111827, #1e293b);
-    }
-    body.dark .hero {
-      background: linear-gradient(rgba(15,23,42,0.9), rgba(30,41,59,0.9)),
-                  url('img/hero-geografi.jpg') center/cover no-repeat;
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      nav { padding: 12px 25px; }
+      nav ul { display: none; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .content h2 { font-size: 1.6rem; }
     }
   </style>
 </head>
 
 <body>
-  <!-- ===== NAVBAR ===== -->
   <nav>
     <div class="logo">🌏 Geografi XI</div>
-    <div class="menu-toggle" id="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <ul id="menu">
+    <ul>
       <li><a href="index.html">Beranda</a></li>
       <li><a href="materi.html">Materi</a></li>
       <li><a href="peta-konsep.html">Peta Konsep</a></li>
       <li><a href="kuis.html">Kuis</a></li>
-      <li><a href="projek.html">Projek Siswa</a></li>
+      <li><a href="projek.html">Projek</a></li>
       <li><a href="tentang.html">Tentang</a></li>
     </ul>
     <button class="theme-toggle" id="theme-toggle">🌙</button>
   </nav>
 
-  <!-- ===== HEADER ===== -->
+  <section class="hero">
+    <h1>Media Pembelajaran Digital Geografi Kelas XI</h1>
+    <p>Rasakan pengalaman belajar Geografi dengan desain modern, interaktif, dan inspiratif 🌍</p>
+    <a href="materi.html">Mulai Belajar</a>
+  </section>
+
   <header class="header">
     <a href="https://ibb.co.com/fGP0GF88" target="_blank">
       <img src="https://i.ibb.co.com/jZ14ZfVV/4x6.jpg" alt="Eka Winda Hevalianda">
@@ -260,50 +265,29 @@
     <p>Pengembang Media Pembelajaran | SMA Negeri 1 Purwoharjo</p>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <h1>Media Pembelajaran Digital Geografi Kelas XI</h1>
-    <p>Belajar Geografi lebih interaktif, fleksibel, dan menyenangkan 🌍</p>
-    <a href="materi.html">Mulai Belajar</a>
-  </section>
-
-  <!-- ===== CONTENT ===== -->
   <section class="content">
     <h2>Tentang Media Ini</h2>
     <p>
-      Media Pembelajaran Digital Geografi Kelas XI dirancang untuk membantu siswa memahami konsep Geografi dengan cara interaktif dan mudah diakses. 
-      Materi disusun berdasarkan Kurikulum Merdeka dengan tampilan visual yang menarik agar pembelajaran terasa menyenangkan.
+      Media Pembelajaran Digital Geografi Kelas XI dikembangkan sebagai inovasi untuk menghadirkan pengalaman belajar yang estetik, informatif, dan interaktif.
+      Setiap materi dirancang dengan elemen visual dinamis agar siswa dapat memahami konsep geografi secara kontekstual dan menarik.
     </p>
     <p>
-      Melalui media berbasis GitHub Pages ini, siswa dapat mempelajari berbagai topik penting seperti Litosfer, Atmosfer, Hidrosfer, dan Interaksi Manusia dengan Lingkungan secara dinamis dan kontekstual.
+      Platform ini memanfaatkan GitHub Pages sehingga bisa diakses kapan saja dan di mana saja — menciptakan ruang belajar digital yang artistik dan inspiratif untuk generasi modern.
     </p>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI<br>
-    Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
+    <p>© 2025 Media Pembelajaran Geografi XI<br>Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
   </footer>
 
-  <!-- ===== SCRIPT ===== -->
   <script>
-    // Toggle Menu Mobile
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    // Dark Mode Toggle
+    // DARK MODE TOGGLE
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-
-    // Cek preferensi sebelumnya
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark');
       themeToggle.textContent = '🌞';
     }
-
     themeToggle.addEventListener('click', () => {
       body.classList.toggle('dark');
       const isDark = body.classList.contains('dark');
