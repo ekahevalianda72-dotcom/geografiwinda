@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuis Geografi Kelas XI | SMA Negeri 1 Purwoharjo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      background-color: #1e40af;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.85)), 
+                  url('img/hero-geografi.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    /* ====== KUIS SECTION ====== */
+    .quiz-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #1e40af;
+    }
+
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    button {
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #374adf;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav>
+    <div class="logo">🌏 Geografi XI</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="materi.html">Materi</a></li>
+      <li><a href="peta-konsep.html">Peta Konsep</a></li>
+      <li><a href="kuis.html">Kuis</a></li>
+      <li><a href="projek.html">Projek Siswa</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <h1>Kuis Geografi Kelas XI</h1>
+    <p>Uji pemahamanmu tentang konsep-konsep penting dalam Geografi!</p>
+  </section>
+
+  <!-- ====== KUIS ====== -->
+  <section class="quiz-container">
+    <form id="quizForm">
+
+      <div class="question">
+        1. Lapisan batuan penyusun bumi disebut ...
+      </div>
+      <label><input type="radio" name="q1" value="a"> A. Atmosfer</label>
+      <label><input type="radio" name="q1" value="b"> B. Hidrosfer</label>
+      <label><input type="radio" name="q1" value="c"> C. Litosfer</label>
+      <label><input type="radio" name="q1" value="d"> D. Biosfer</label>
+
+      <div class="question">
+        2. Proses pembentukan awan merupakan bagian dari siklus ...
+      </div>
+      <label><input type="radio" name="q2" value="a"> A. Karbon</label>
+      <label><input type="radio" name="q2" value="b"> B. Nitrogen</label>
+      <label><input type="radio" name="q2" value="c"> C. Air</label>
+      <label><input type="radio" name="q2" value="d"> D. Oksigen</label>
+
+      <div class="question">
+        3. Contoh interaksi manusia dengan lingkungan abiotik adalah ...
+      </div>
+      <label><input type="radio" name="q3" value="a"> A. Petani menanam padi</label>
+      <label><input type="radio" name="q3" value="b"> B. Nelayan menangkap ikan</label>
+      <label><input type="radio" name="q3" value="c"> C. Pembangunan waduk</label>
+      <label><input type="radio" name="q3" value="d"> D. Penangkaran hewan langka</label>
+
+      <div class="question">
+        4. Lapisan udara yang melindungi bumi dari sinar ultraviolet adalah ...
+      </div>
+      <label><input type="radio" name="q4" value="a"> A. Troposfer</label>
+      <label><input type="radio" name="q4" value="b"> B. Stratosfer</label>
+      <label><input type="radio" name="q4" value="c"> C. Mesosfer</label>
+      <label><input type="radio" name="q4" value="d"> D. Termosfer</label>
+
+      <div class="question">
+        5. Berikut ini yang termasuk sumber daya alam yang dapat diperbarui adalah ...
+      </div>
+      <label><input type="radio" name="q5" value="a"> A. Batu bara</label>
+      <label><input type="radio" name="q5" value="b"> B. Minyak bumi</label>
+      <label><input type="radio" name="q5" value="c"> C. Air dan hutan</label>
+      <label><input type="radio" name="q5" value="d"> D. Emas dan tembaga</label>
+
+      <br><br>
+      <button type="button" onclick="checkAnswers()">Periksa Jawaban</button>
+      <div id="result"></div>
+    </form>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI <br>
+    Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
+  </footer>
+
+  <script>
+    function checkAnswers() {
+      const correct = {
+        q1: "c",
+        q2: "c",
+        q3: "c",
+        q4: "b",
+        q5: "c"
+      };
+
+      let score = 0;
+      const form = document.forms["quizForm"];
+      for (let key in correct) {
+        if (form[key].value === correct[key]) score++;
+      }
+
+      const total = Object.keys(correct).length;
+      const percent = (score / total) * 100;
+      let message = "";
+
+      if (percent === 100) message = "🎉 Sempurna! Kamu menjawab semua dengan benar!";
+      else if (percent >= 80) message = "🌟 Sangat baik! Pemahamanmu luar biasa.";
+      else if (percent >= 60) message = "👍 Cukup baik, tingkatkan lagi ya!";
+      else message = "📘 Ayo belajar lagi, kamu pasti bisa!";
+
+      document.getElementById("result").innerHTML = 
+        `Nilai kamu: ${score}/${total} (${percent}%)<br>${message}`;
+    }
+  </script>
+
+</body>
+</html>
