@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Geografi Kelas XI | SMA Negeri 1 Purwoharjo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      background-color: #1e40af;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.85)), 
+                  url('img/materi-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* ====== MATERI GRID ====== */
+    .materi-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .materi-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .materi-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .materi-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .materi-card h3 {
+      color: #1e40af;
+      margin-bottom: 10px;
+    }
+
+    .materi-card p {
+      font-size: 15px;
+      color: #475569;
+      margin-bottom: 15px;
+    }
+
+    .materi-card a {
+      background-color: #1e40af;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .materi-card a:hover {
+      background-color: #2563eb;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav>
+    <div class="logo">🌏 Geografi XI</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="materi.html">Materi</a></li>
+      <li><a href="peta-konsep.html">Peta Konsep</a></li>
+      <li><a href="kuis.html">Kuis</a></li>
+      <li><a href="projek.html">Projek</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <h1>Materi Pembelajaran Geografi Kelas XI</h1>
+    <p>Eksplorasi Konsep Litosfer, Atmosfer, Hidrosfer, dan Lingkungan Hidup</p>
+  </section>
+
+  <!-- ====== MATERI LIST ====== -->
+  <section class="materi-container">
+
+    <div class="materi-card">
+      <img src="img/litosfer.jpg" alt="Litosfer">
+      <h3>Litosfer</h3>
+      <p>Mempelajari lapisan batuan pembentuk bumi dan dinamika geosfer.</p>
+      <a href="materi/litosfer.html">Buka Materi</a>
+    </div>
+
+    <div class="materi-card">
+      <img src="img/atmosfer.jpg" alt="Atmosfer">
+      <h3>Atmosfer</h3>
+      <p>Memahami lapisan udara bumi dan hubungannya dengan iklim dan cuaca.</p>
+      <a href="materi/atmosfer.html">Buka Materi</a>
+    </div>
+
+    <div class="materi-card">
+      <img src="img/hidrosfer.jpg" alt="Hidrosfer">
+      <h3>Hidrosfer</h3>
+      <p>Mengenal air di bumi — laut, sungai, dan siklus hidrologi.</p>
+      <a href="materi/hidrosfer.html">Buka Materi</a>
+    </div>
+
+    <div class="materi-card">
+      <img src="img/lingkungan.jpg" alt="Lingkungan Hidup">
+      <h3>Lingkungan Hidup</h3>
+      <p>Mempelajari hubungan antar komponen biotik dan abiotik di bumi.</p>
+      <a href="materi/lingkungan.html">Buka Materi</a>
+    </div>
+
+    <div class="materi-card">
+      <img src="img/interaksi.jpg" alt="Interaksi Manusia dan Lingkungan">
+      <h3>Interaksi Manusia dan Lingkungan</h3>
+      <p>Menganalisis dampak aktivitas manusia terhadap perubahan lingkungan global.</p>
+      <a href="materi/interaksi-manusia-lingkungan.html">Buka Materi</a>
+    </div>
+
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI <br>
+    Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
+  </footer>
+
+</body>
+</html>
