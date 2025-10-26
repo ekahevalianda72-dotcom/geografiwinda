@@ -43,6 +43,31 @@
       text-decoration: underline;
     }
 
+    /* ====== HEADER (AVATAR) ====== */
+    .header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background: #f8fafc;
+    }
+    .header img {
+      width: 120px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #1e40af;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .header h2 {
+      margin: 5px 0 0;
+      color: #1e40af;
+      font-size: 20px;
+    }
+    .header p {
+      margin: 5px 0 15px;
+      color: #475569;
+      font-size: 15px;
+    }
+
     /* ====== HERO SECTION ====== */
     .hero {
       background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.85)), 
@@ -92,34 +117,9 @@
       background-color: #1e40af;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
       margin-top: 40px;
       font-size: 14px;
-    }
-
-    .developer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .developer img {
-      width: 70px;
-      height: 90px;
-      border-radius: 10px;
-      border: 2px solid #facc15;
-      object-fit: cover;
-    }
-    .developer-info {
-      text-align: left;
-    }
-    .developer-info strong {
-      font-size: 15px;
-    }
-    .developer-info small {
-      display: block;
-      color: #e0e7ff;
     }
   </style>
 </head>
@@ -138,6 +138,15 @@
       <li><a href="tentang.html">Tentang</a></li>
     </ul>
   </nav>
+
+  <!-- ====== HEADER (AVATAR PENGEMBANG) ====== -->
+  <header class="header">
+    <a href="https://ibb.co.com/fGP0GF88" target="_blank">
+      <img src="https://i.ibb.co.com/jZ14ZfVV/4x6.jpg" alt="Eka Winda Hevalianda">
+    </a>
+    <h2><strong>Eka Winda Hevalianda, S.Pd.</strong></h2>
+    <p>Pengembang Media Pembelajaran | SMA Negeri 1 Purwoharjo</p>
+  </header>
 
   <!-- ====== HERO SECTION ====== -->
   <section class="hero">
@@ -163,17 +172,8 @@
 
   <!-- ====== FOOTER ====== -->
   <footer>
-    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI</p>
-
-    <div class="developer">
-      <a href="https://ibb.co.com/fGP0GF88" target="_blank">
-        <img src="https://i.ibb.co.com/jZ14ZfVV/4x6.jpg" alt="Eka Winda Hevalianda">
-      </a>
-      <div class="developer-info">
-        <strong>Eka Winda Hevalianda, S.Pd.</strong>
-        <small>Pengembang Media | SMA Negeri 1 Purwoharjo</small>
-      </div>
-    </div>
+    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI <br>
+    Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
   </footer>
 
 </body>
