@@ -92,9 +92,34 @@
       background-color: #1e40af;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       margin-top: 40px;
       font-size: 14px;
+    }
+
+    .developer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .developer img {
+      width: 70px;
+      height: 90px;
+      border-radius: 10px;
+      border: 2px solid #facc15;
+      object-fit: cover;
+    }
+    .developer-info {
+      text-align: left;
+    }
+    .developer-info strong {
+      font-size: 15px;
+    }
+    .developer-info small {
+      display: block;
+      color: #e0e7ff;
     }
   </style>
 </head>
@@ -138,8 +163,17 @@
 
   <!-- ====== FOOTER ====== -->
   <footer>
-    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI <br>
-    Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
+    <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI</p>
+
+    <div class="developer">
+      <a href="https://ibb.co.com/fGP0GF88" target="_blank">
+        <img src="https://i.ibb.co.com/jZ14ZfVV/4x6.jpg" alt="Eka Winda Hevalianda">
+      </a>
+      <div class="developer-info">
+        <strong>Eka Winda Hevalianda, S.Pd.</strong>
+        <small>Pengembang Media | SMA Negeri 1 Purwoharjo</small>
+      </div>
+    </div>
   </footer>
 
 </body>
