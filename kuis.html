@@ -57,12 +57,20 @@
 
     /* ====== KUIS SECTION ====== */
     .quiz-container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       background: white;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .case-study {
+      background-color: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border-left: 4px solid #1e40af;
     }
 
     .question {
@@ -71,20 +79,57 @@
       color: #1e40af;
     }
 
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background-color: #e2e8f0;
+    }
+
     label {
       display: block;
-      margin: 5px 0;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+
+    label:hover {
+      background-color: #f1f5f9;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-family: "Poppins", sans-serif;
+      margin-top: 10px;
     }
 
     button {
       background-color: #1e40af;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
       transition: 0.3s;
+      margin-top: 10px;
     }
 
     button:hover {
@@ -96,6 +141,18 @@
       font-size: 18px;
       font-weight: bold;
       color: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .correct {
+      background-color: #d1fae5;
+      border-left: 4px solid #10b981;
+    }
+
+    .incorrect {
+      background-color: #fee2e2;
+      border-left: 4px solid #ef4444;
     }
 
     /* ====== FOOTER ====== */
@@ -112,7 +169,7 @@
 
 <body>
 
-  <!-- ====== NAVBAR ====== -->
+  <!-- ====== NAVBAR ====== */
   <nav>
     <div class="logo">🌏 Geografi XI</div>
     <ul>
@@ -125,55 +182,159 @@
     </ul>
   </nav>
 
-  <!-- ====== HERO ====== -->
+  <!-- ====== HERO ====== */
   <section class="hero">
-    <h1>Kuis Geografi Kelas XI</h1>
-    <p>Uji pemahamanmu tentang konsep-konsep penting dalam Geografi!</p>
+    <h1>Kuis Geografi Kelas XI - Studi Kasus</h1>
+    <p>Uji kemampuan analisis, evaluasi, dan kreasi Anda dalam memahami konsep-konsep geografi!</p>
   </section>
 
-  <!-- ====== KUIS ====== -->
+  <!-- ====== KUIS ====== */
   <section class="quiz-container">
     <form id="quizForm">
 
-      <div class="question">
-        1. Lapisan batuan penyusun bumi disebut ...
+      <!-- Soal 1: Analisis Data (C4) -->
+      <div class="case-study">
+        <h3>Studi Kasus 1: Analisis Perubahan Iklim</h3>
+        <p>Anda adalah seorang peneliti iklim yang sedang menganalisis data suhu rata-rata tahunan di Kota Purwoharjo selama 10 tahun terakhir:</p>
+        
+        <table class="data-table">
+          <tr>
+            <th>Tahun</th>
+            <th>2015</th>
+            <th>2016</th>
+            <th>2017</th>
+            <th>2018</th>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+          </tr>
+          <tr>
+            <td>Suhu (°C)</td>
+            <td>27.1</td>
+            <td>27.3</td>
+            <td>27.5</td>
+            <td>27.8</td>
+            <td>28.0</td>
+            <td>28.2</td>
+            <td>28.4</td>
+            <td>28.6</td>
+            <td>28.9</td>
+            <td>29.1</td>
+          </tr>
+        </table>
+        
+        <p>Selain itu, data menunjukkan peningkatan intensitas hujan ekstrem dari 3 kejadian pada tahun 2015 menjadi 8 kejadian pada tahun 2024.</p>
       </div>
-      <label><input type="radio" name="q1" value="a"> A. Atmosfer</label>
-      <label><input type="radio" name="q1" value="b"> B. Hidrosfer</label>
-      <label><input type="radio" name="q1" value="c"> C. Litosfer</label>
-      <label><input type="radio" name="q1" value="d"> D. Biosfer</label>
 
       <div class="question">
-        2. Proses pembentukan awan merupakan bagian dari siklus ...
+        1. Berdasarkan data di atas, analisis hubungan antara peningkatan suhu dengan perubahan pola curah hujan di Kota Purwoharjo!
       </div>
-      <label><input type="radio" name="q2" value="a"> A. Karbon</label>
-      <label><input type="radio" name="q2" value="b"> B. Nitrogen</label>
-      <label><input type="radio" name="q2" value="c"> C. Air</label>
-      <label><input type="radio" name="q2" value="d"> D. Oksigen</label>
+      <label><input type="radio" name="q1" value="a"> A. Peningkatan suhu menyebabkan penurunan intensitas hujan karena penguapan yang lebih cepat</label>
+      <label><input type="radio" name="q1" value="b"> B. Peningkatan suhu tidak berpengaruh signifikan terhadap pola curah hujan</label>
+      <label><input type="radio" name="q1" value="c"> C. Peningkatan suhu meningkatkan kapasitas udara menahan uap air sehingga meningkatkan potensi hujan ekstrem</label>
+      <label><input type="radio" name="q1" value="d"> D. Peningkatan suhu menyebabkan distribusi hujan lebih merata sepanjang tahun</label>
+
+      <!-- Soal 2: Evaluasi Kebijakan (C5) -->
+      <div class="case-study">
+        <h3>Studi Kasus 2: Evaluasi Kebijakan Pengelolaan Sumber Daya Air</h3>
+        <p>Pemerintah daerah Purwoharjo merencanakan pembangunan waduk baru di daerah aliran sungai (DAS) untuk mengatasi masalah kekeringan musiman. Rencana ini mendapat tanggapan beragam:</p>
+        <ul>
+          <li><strong>Dukungan:</strong> Menyediakan cadangan air untuk pertanian, mengurangi banjir, potensi wisata</li>
+          <li><strong>Penolakan:</strong> Mengganggu ekosistem sungai, memindahkan penduduk lokal, sedimentasi waduk</li>
+        </ul>
+        <p>Alternatif lain yang diusulkan adalah sistem embung kecil di berbagai titik dan program konservasi air tanah.</p>
+      </div>
 
       <div class="question">
-        3. Contoh interaksi manusia dengan lingkungan abiotik adalah ...
+        2. Evaluasi kedua alternatif kebijakan tersebut berdasarkan prinsip pembangunan berkelanjutan!
       </div>
-      <label><input type="radio" name="q3" value="a"> A. Petani menanam padi</label>
-      <label><input type="radio" name="q3" value="b"> B. Nelayan menangkap ikan</label>
-      <label><input type="radio" name="q3" value="c"> C. Pembangunan waduk</label>
-      <label><input type="radio" name="q3" value="d"> D. Penangkaran hewan langka</label>
+      <label><input type="radio" name="q2" value="a"> A. Pembangunan waduk lebih menguntungkan karena memberikan manfaat ekonomi langsung</label>
+      <label><input type="radio" name="q2" value="b"> B. Sistem embung dan konservasi lebih berkelanjutan karena dampak lingkungan lebih kecil</label>
+      <label><input type="radio" name="q2" value="c"> C. Kedua alternatif sama-sama tidak berkelanjutan dan perlu dicari opsi ketiga</label>
+      <label><input type="radio" name="q2" value="d"> D. Pembangunan waduk lebih berkelanjutan karena dapat mengatur aliran air sepanjang tahun</label>
+
+      <!-- Soal 3: Analisis Interaksi Manusia-Lingkungan (C4) -->
+      <div class="case-study">
+        <h3>Studi Kasus 3: Analisis Dampak Perubahan Lahan</h3>
+        <p>Wilayah pesisir Purwoharjo mengalami perubahan penggunaan lahan signifikan dalam 20 tahun terakhir:</p>
+        <table class="data-table">
+          <tr>
+            <th>Jenis Lahan</th>
+            <th>Tahun 2004 (ha)</th>
+            <th>Tahun 2024 (ha)</th>
+            <th>Perubahan</th>
+          </tr>
+          <tr>
+            <td>Hutan Mangrove</td>
+            <td>850</td>
+            <td>320</td>
+            <td>-62%</td>
+          </tr>
+          <tr>
+            <td>Tambak Udang</td>
+            <td>150</td>
+            <td>580</td>
+            <td>+287%</td>
+          </tr>
+          <tr>
+            <td>Permukiman</td>
+            <td>200</td>
+            <td>450</td>
+            <td>+125%</td>
+          </tr>
+        </table>
+        <p>Dampak yang teramati: abrasi pantai meningkat, hasil tangkapan ikan menurun, dan intrusi air laut ke daratan.</p>
+      </div>
 
       <div class="question">
-        4. Lapisan udara yang melindungi bumi dari sinar ultraviolet adalah ...
+        3. Analisis hubungan sebab-akibat antara perubahan penggunaan lahan dengan dampak lingkungan yang terjadi!
       </div>
-      <label><input type="radio" name="q4" value="a"> A. Troposfer</label>
-      <label><input type="radio" name="q4" value="b"> B. Stratosfer</label>
-      <label><input type="radio" name="q4" value="c"> C. Mesosfer</label>
-      <label><input type="radio" name="q4" value="d"> D. Termosfer</label>
+      <label><input type="radio" name="q3" value="a"> A. Penurunan hutan mangrove menyebabkan berkurangnya perlindungan pantai dari abrasi</label>
+      <label><input type="radio" name="q3" value="b"> B. Peningkatan permukiman tidak berkaitan dengan masalah lingkungan di pesisir</label>
+      <label><input type="radio" name="q3" value="c"> C. Perubahan penggunaan lahan hanya mempengaruhi estetika lingkungan</label>
+      <label><input type="radio" name="q3" value="d"> D. Dampak lingkungan disebabkan oleh faktor alam, bukan perubahan lahan</label>
+
+      <!-- Soal 4: Evaluasi Strategi Mitigasi (C5) -->
+      <div class="case-study">
+        <h3>Studi Kasus 4: Evaluasi Strategi Mitigasi Bencana</h3>
+        <p>Purwoharjo terletak di daerah rawan gempa dan tsunami. Pemerintah daerah mengusulkan beberapa strategi mitigasi:</p>
+        <ol>
+          <li>Pembangunan tembok penahan tsunami setinggi 8 meter sepanjang pantai</li>
+          <li>Penanaman hutan pantai dan rehabilitasi mangrove</li>
+          <li>Pembangunan sistem peringatan dini dan jalur evakuasi</li>
+          <li>Relokasi permukiman di zona bahaya ke daerah yang lebih aman</li>
+        </ol>
+        <p>Anggaran terbatas memaksa pemilihan hanya dua strategi utama.</p>
+      </div>
 
       <div class="question">
-        5. Berikut ini yang termasuk sumber daya alam yang dapat diperbarui adalah ...
+        4. Berdasarkan efektivitas dan keberlanjutan, strategi mana yang paling tepat diprioritaskan?
       </div>
-      <label><input type="radio" name="q5" value="a"> A. Batu bara</label>
-      <label><input type="radio" name="q5" value="b"> B. Minyak bumi</label>
-      <label><input type="radio" name="q5" value="c"> C. Air dan hutan</label>
-      <label><input type="radio" name="q5" value="d"> D. Emas dan tembaga</label>
+      <label><input type="checkbox" name="q4a" value="a"> A. Tembok penahan tsunami</label>
+      <label><input type="checkbox" name="q4b" value="b"> B. Rehabilitasi mangrove dan hutan pantai</label>
+      <label><input type="checkbox" name="q4c" value="c"> C. Sistem peringatan dini dan jalur evakuasi</label>
+      <label><input type="checkbox" name="q4d" value="d"> D. Relokasi permukiman</label>
+
+      <!-- Soal 5: Perencanaan Solusi (C6) -->
+      <div class="case-study">
+        <h3>Studi Kasus 5: Perencanaan Pengelolaan Lingkungan Berkelanjutan</h3>
+        <p>Desa Tambakrejo di Purwoharjo menghadapi masalah kompleks:</p>
+        <ul>
+          <li>Penurunan kualitas air akibat limbah pertanian dan domestik</li>
+          <li>Degradasi lahan akibat penggunaan pupuk kimia berlebihan</li>
+          <li>Konflik penggunaan air antara sektor pertanian dan domestik</li>
+          <li>Penurunan keanekaragaman hayati lokal</li>
+        </ul>
+        <p>Sebagai konsultan lingkungan, Anda diminta merancang solusi terintegrasi.</p>
+      </div>
+
+      <div class="question">
+        5. Rancang rencana aksi terintegrasi untuk mengatasi masalah lingkungan di Desa Tambakrejo!
+      </div>
+      <textarea name="q5" rows="5" placeholder="Tuliskan rencana aksi Anda di sini..."></textarea>
 
       <br><br>
       <button type="button" onclick="checkAnswers()">Periksa Jawaban</button>
@@ -181,7 +342,7 @@
     </form>
   </section>
 
-  <!-- ====== FOOTER ====== -->
+  <!-- ====== FOOTER ====== */
   <footer>
     <p>© 2025 Media Pembelajaran Digital Geografi Kelas XI <br>
     Dikembangkan oleh <strong>Eka Winda Hevalianda, S.Pd.</strong> – SMA Negeri 1 Purwoharjo</p>
@@ -191,29 +352,67 @@
     function checkAnswers() {
       const correct = {
         q1: "c",
-        q2: "c",
-        q3: "c",
-        q4: "b",
-        q5: "c"
+        q2: "b",
+        q3: "a",
+        q4: ["b", "c"], // Multiple correct answers
+        q5: "integrated" // For open-ended question, we'll check for keywords
       };
 
       let score = 0;
       const form = document.forms["quizForm"];
-      for (let key in correct) {
-        if (form[key].value === correct[key]) score++;
+      
+      // Check Q1
+      if (form.q1.value === correct.q1) score++;
+      
+      // Check Q2
+      if (form.q2.value === correct.q2) score++;
+      
+      // Check Q3
+      if (form.q3.value === correct.q3) score++;
+      
+      // Check Q4 (multiple answers)
+      const q4Answers = [];
+      if (form.q4a.checked) q4Answers.push("a");
+      if (form.q4b.checked) q4Answers.push("b");
+      if (form.q4c.checked) q4Answers.push("c");
+      if (form.q4d.checked) q4Answers.push("d");
+      
+      // Check if selected answers match correct answers
+      if (q4Answers.length === correct.q4.length && 
+          q4Answers.every(val => correct.q4.includes(val))) {
+        score++;
+      }
+      
+      // Check Q5 (open-ended, check for keywords)
+      const q5Answer = form.q5.value.toLowerCase();
+      const keywords = ["konservasi", "berkelanjutan", "integrasi", "limbah", "organik", "daur ulang", "edukasi"];
+      const foundKeywords = keywords.filter(keyword => q5Answer.includes(keyword));
+      
+      if (foundKeywords.length >= 3) {
+        score++;
       }
 
       const total = Object.keys(correct).length;
-      const percent = (score / total) * 100;
+      const percent = Math.round((score / total) * 100);
       let message = "";
 
-      if (percent === 100) message = "🎉 Sempurna! Kamu menjawab semua dengan benar!";
-      else if (percent >= 80) message = "🌟 Sangat baik! Pemahamanmu luar biasa.";
-      else if (percent >= 60) message = "👍 Cukup baik, tingkatkan lagi ya!";
-      else message = "📘 Ayo belajar lagi, kamu pasti bisa!";
+      if (percent === 100) message = "🎉 Sempurna! Kemampuan analisis dan evaluasi Anda luar biasa!";
+      else if (percent >= 80) message = "🌟 Sangat baik! Pemahaman konsep geografi Anda mendalam.";
+      else if (percent >= 60) message = "👍 Cukup baik, terus asah kemampuan analisis Anda!";
+      else message = "📘 Ayo pelajari kembali materi dan tingkatkan kemampuan analisisnya!";
 
       document.getElementById("result").innerHTML = 
-        `Nilai kamu: ${score}/${total} (${percent}%)<br>${message}`;
+        `Nilai Anda: ${score}/${total} (${percent}%)<br>${message}`;
+        
+      // Add explanation for answers
+      let explanation = "<br><br><strong>Pembahasan:</strong><br>";
+      explanation += "<strong>1.</strong> Peningkatan suhu meningkatkan kapasitas udara menahan uap air (C).<br>";
+      explanation += "<strong>2.</strong> Sistem embung dan konservasi lebih berkelanjutan (B).<br>";
+      explanation += "<strong>3.</strong> Penurunan hutan mangrove mengurangi perlindungan pantai (A).<br>";
+      explanation += "<strong>4.</strong> Rehabilitasi mangrove dan sistem peringatan dini paling berkelanjutan (B & C).<br>";
+      explanation += "<strong>5.</strong> Rencana aksi terintegrasi harus mencakup aspek lingkungan, sosial, dan ekonomi.";
+      
+      document.getElementById("result").innerHTML += explanation;
     }
   </script>
 
