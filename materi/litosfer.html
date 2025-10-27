@@ -11,7 +11,6 @@
       margin: 0;
       background-color: #f8fafc;
       color: #1e293b;
-      line-height: 1.6;
     }
 
     nav {
@@ -21,79 +20,33 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 40px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    nav .logo { 
-      font-weight: bold; 
-      font-size: 20px; 
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    nav ul { 
-      list-style: none; 
-      display: flex; 
-      gap: 20px; 
-      margin: 0; 
-      padding: 0; 
-    }
-    nav ul li a { 
-      color: white; 
-      text-decoration: none; 
-      font-weight: 500; 
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-    nav ul li a:hover { 
-      background-color: rgba(255, 255, 255, 0.2);
-    }
+    nav .logo { font-weight: bold; font-size: 20px; }
+    nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+    nav ul li a:hover { text-decoration: underline; }
 
     .hero {
       background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.85)), 
-                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400"><rect width="1200" height="400" fill="%231e40af"/><text x="50%" y="50%" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Gambar Litosfer</text></svg>') center/cover no-repeat;
+                  url('../img/litosfer.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 80px 20px;
     }
-    .hero h1 { 
-      font-size: 34px; 
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+    .hero h1 { font-size: 34px; }
 
     .content {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
+      line-height: 1.8;
     }
-    .content h2 { 
-      color: #1e40af; 
-      border-bottom: 2px solid #1e40af;
-      padding-bottom: 8px;
-      margin-top: 40px;
-    }
-    .content img {
+    .content h2 { color: #1e40af; }
+    .content img,
+    .content iframe {
       width: 100%;
       border-radius: 12px;
       margin: 20px 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      display: block;
-    }
-    .image-caption {
-      text-align: center;
-      font-style: italic;
-      color: #64748b;
-      margin-top: -10px;
-      margin-bottom: 25px;
-    }
-    .image-container {
-      position: relative;
-      margin: 25px 0;
     }
 
     footer {
@@ -103,40 +56,6 @@
       padding: 20px;
       margin-top: 40px;
       font-size: 14px;
-    }
-    
-    .back-link {
-      display: inline-block;
-      color: #1e40af;
-      font-weight: 600;
-      text-decoration: none;
-      margin-top: 30px;
-      padding: 8px 16px;
-      border: 1px solid #1e40af;
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
-    .back-link:hover {
-      background-color: #1e40af;
-      color: white;
-    }
-    
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        padding: 15px 20px;
-        gap: 15px;
-      }
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .hero {
-        padding: 60px 20px;
-      }
-      .hero h1 {
-        font-size: 28px;
-      }
     }
   </style>
 </head>
@@ -162,42 +81,47 @@
   <section class="content">
     <h2>Pengertian Litosfer</h2>
     <p>
-      Litosfer adalah lapisan paling luar dari bumi yang tersusun atas batuan padat dan tanah. 
-      Lapisan ini meliputi kerak bumi dan bagian atas mantel bumi yang kaku. 
-      Ketebalan litosfer berkisar antara 50 hingga 100 km dan terdiri atas lempeng-lempeng besar yang saling bergerak.
+      Litosfer adalah lapisan paling luar dari Bumi yang tersusun atas batuan padat dan tanah. 
+      Lapisan ini meliputi kerak bumi (crust) dan bagian atas mantel bumi yang bersifat kaku (upper mantle rigid). 
+      Ketebalan litosfer berkisar antara 50 hingga 100 km di bawah daratan, dan lebih tipis di bawah dasar samudra (sekitar 5–10 km). 
+      Litosfer terpecah menjadi lempeng-lempeng tektonik besar yang terus bergerak perlahan akibat arus konveksi di lapisan astenosfer di bawahnya.
     </p>
 
-    <div class="image-container">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='18' fill='%23475569' text-anchor='middle'>Gambar Struktur Litosfer</text></svg>" 
-           alt="Struktur Litosfer">
-      <p class="image-caption">Gambar 1: Struktur lapisan litosfer bumi</p>
-    </div>
+    <img src="../img/lapisan-bumi.jpg" alt="Struktur Litosfer">
 
     <h2>Dinamika Litosfer</h2>
     <p>
       Pergerakan lempeng tektonik menyebabkan berbagai fenomena geosfer seperti gempa bumi, gunung api, dan pembentukan pegunungan. 
-      Aktivitas vulkanisme dan seisme merupakan bagian penting dalam memahami dinamika litosfer di permukaan bumi.
+      Terdapat tiga jenis batas lempeng: <strong>konvergen</strong> (bertumbukan), <strong>divergen</strong> (menjauh), dan <strong>transform</strong> (bergeser horizontal). 
+      Aktivitas vulkanisme dan seisme merupakan bagian penting dalam memahami dinamika litosfer di permukaan bumi. 
+      Contohnya, Indonesia berada di pertemuan tiga lempeng besar (Indo-Australia, Eurasia, dan Pasifik), sehingga sering mengalami gempa dan letusan gunung berapi.
     </p>
 
-    <div class="image-container">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='18' fill='%23475569' text-anchor='middle'>Gambar Pergerakan Lempeng Tektonik</text></svg>" 
-           alt="Pergerakan Lempeng Tektonik">
-      <p class="image-caption">Gambar 2: Ilustrasi pergerakan lempeng tektonik</p>
-    </div>
-
-    <h2>Manfaat dan Dampak</h2>
+    <h2>Video Pembelajaran: Memahami Litosfer</h2>
     <p>
-      Litosfer menyediakan sumber daya alam seperti mineral, batu bara, dan minyak bumi. 
-      Namun, eksploitasi berlebihan dapat menyebabkan kerusakan lingkungan seperti tanah longsor dan erosi.
+      Tonton video berikut untuk memperdalam pemahamanmu tentang struktur litosfer, pergerakan lempeng tektonik, dan dampaknya terhadap kehidupan di Bumi.
+    </p>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/6Sju3Ek_0OY?si=XYMli7ArKCTXbpv4" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+
+    <h2>Manfaat dan Dampak Litosfer</h2>
+    <p>
+      Litosfer menyediakan sumber daya alam yang sangat penting bagi kehidupan manusia, seperti mineral logam (emas, tembaga, nikel), batu bara, minyak bumi, gas alam, serta bahan galian industri (pasir, batu kapur, dll). 
+      Namun, eksploitasi berlebihan dapat menyebabkan kerusakan lingkungan seperti tanah longsor, erosi, penurunan kualitas tanah, dan bahkan memicu bencana geologi akibat aktivitas tambang atau penebangan hutan di lereng gunung.
+    </p>
+    <p>
+      Oleh karena itu, pemanfaatan litosfer harus dilakukan secara bijak dan berkelanjutan, dengan memperhatikan aspek geologis, ekologis, dan sosial.
     </p>
 
-    <div class="image-container">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'><rect width='800' height='400' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='18' fill='%23475569' text-anchor='middle'>Gambar Sumber Daya Mineral</text></svg>" 
-           alt="Sumber Daya Mineral">
-      <p class="image-caption">Gambar 3: Berbagai sumber daya mineral dari litosfer</p>
-    </div>
-
-    <a href="../materi.html" class="back-link">← Kembali ke Daftar Materi</a>
+    <p><a href="../materi.html" style="color:#1e40af; font-weight:600;">← Kembali ke Daftar Materi</a></p>
   </section>
 
   <footer>
