@@ -129,6 +129,107 @@
       margin-top: 60px;
       font-size: 14px;
     }
+
+    /* ====== DIAGRAM PETA KONSEP ====== */
+    .concept-diagram {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .concept-center {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .center-node {
+      display: inline-block;
+      background: #1e40af;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .concept-branches {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .branch {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .branch-title {
+      background: #3b82f6;
+      color: white;
+      padding: 12px 15px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .branch-items {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .branch-items li {
+      background: #e2e8f0;
+      margin-bottom: 8px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      border-left: 3px solid #3b82f6;
+    }
+
+    .connections {
+      position: relative;
+      height: 40px;
+      margin: 10px 0;
+    }
+
+    .connection-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #94a3b8;
+      transform: translateY(-50%);
+    }
+
+    .connection-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background: #3b82f6;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 768px) {
+      .concept-branches {
+        flex-direction: column;
+      }
+      
+      .branch {
+        min-width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -175,8 +276,62 @@
       Setiap cabang saling terkait melalui prinsip interelasi, distribusi, deskripsi, dan korologi—empat pilar utama ilmu Geografi.
     </p>
 
-    <div class="concept-map">
-      <img src="img/peta-konsep-geografi.jpg" alt="Peta Konsep Geografi Kelas XI: Menunjukkan hubungan antara Litosfer, Atmosfer, Hidrosfer, Biosfer, dan Antroposfer" />
+    <!-- Peta Konsep sebagai Diagram HTML/CSS -->
+    <div class="concept-diagram">
+      <div class="concept-center">
+        <div class="center-node">GEOGRAFI KELAS XI</div>
+      </div>
+      
+      <div class="connections">
+        <div class="connection-line"></div>
+        <div class="connection-dot"></div>
+      </div>
+      
+      <div class="concept-branches">
+        <div class="branch">
+          <div class="branch-title">LITOSFER</div>
+          <ul class="branch-items">
+            <li>Struktur Bumi</li>
+            <li>Lempeng Tektonik</li>
+            <li>Vulkanisme</li>
+            <li>Gempa Bumi</li>
+            <li>Tenaga Eksogen</li>
+          </ul>
+        </div>
+        
+        <div class="branch">
+          <div class="branch-title">ATMOSFER</div>
+          <ul class="branch-items">
+            <li>Komposisi Atmosfer</li>
+            <li>Cuaca dan Iklim</li>
+            <li>Sirkulasi Udara</li>
+            <li>Perubahan Iklim</li>
+            <li>Pemanasan Global</li>
+          </ul>
+        </div>
+        
+        <div class="branch">
+          <div class="branch-title">HIDROSFER</div>
+          <ul class="branch-items">
+            <li>Siklus Hidrologi</li>
+            <li>Sungai dan Danau</li>
+            <li>Laut dan Samudera</li>
+            <li>Air Tanah</li>
+            <li>Krisis Air Bersih</li>
+          </ul>
+        </div>
+        
+        <div class="branch">
+          <div class="branch-title">INTERAKSI MANUSIA</div>
+          <ul class="branch-items">
+            <li>Adaptasi Lingkungan</li>
+            <li>Mitigasi Bencana</li>
+            <li>Pembangunan Berkelanjutan</li>
+            <li>Konservasi Sumber Daya</li>
+            <li>Kearifan Lokal</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <p>
