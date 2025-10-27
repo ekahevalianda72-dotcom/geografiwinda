@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materi Geografi Kelas XI | SMA Negeri 1 Purwoharjo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-color: #1e3a8a;
@@ -46,8 +45,8 @@
     }
 
     .logo {
-      font-weight: 600;
-      font-size: 20px;
+      font-weight: 700;
+      font-size: 22px;
       letter-spacing: 0.5px;
     }
 
@@ -96,11 +95,12 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        padding: 0 40px;
       }
 
       .nav-links.open {
         max-height: 300px;
-        padding: 10px 0;
+        padding: 10px 40px;
       }
 
       .menu-toggle {
@@ -120,7 +120,7 @@
 
     .hero h1 {
       font-size: 34px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
@@ -134,36 +134,66 @@
     .materi-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      gap: 30px;
       padding: 50px 30px;
       max-width: 1200px;
       margin: auto;
-      animation: slideUp 1s ease;
     }
 
     .materi-card {
-      background-color: var(--white);
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      background: linear-gradient(to bottom right, #ffffff, #f1f5f9);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.12);
       text-align: center;
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 24px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
       display: flex;
       flex-direction: column;
       height: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
     }
 
+    /* Animasi bertahap */
+    .materi-card:nth-child(1) { animation-delay: 0.1s; }
+    .materi-card:nth-child(2) { animation-delay: 0.2s; }
+    .materi-card:nth-child(3) { animation-delay: 0.3s; }
+    .materi-card:nth-child(4) { animation-delay: 0.4s; }
+    .materi-card:nth-child(5) { animation-delay: 0.5s; }
+
     .materi-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      border-color: var(--secondary-color);
+    }
+
+    .topic-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--secondary-color);
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      z-index: 2;
+      font-weight: bold;
     }
 
     .card-image {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
       height: 160px;
       overflow: hidden;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       background-color: #e2e8f0;
     }
 
@@ -172,6 +202,11 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .materi-card:hover .card-image img {
+      transform: scale(1.06);
     }
 
     .card-fallback {
@@ -180,15 +215,18 @@
       justify-content: center;
       height: 100%;
       color: var(--light-text);
-      font-size: 15px;
+      font-size: 14px;
       background: linear-gradient(135deg, #e2e8f0, #f1f5f9);
     }
 
     .materi-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 8px;
-      font-weight: 600;
-      font-size: 18px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 19px;
     }
 
     .materi-card p {
@@ -204,12 +242,26 @@
       padding: 10px 16px;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .materi-card a .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
     }
 
     .materi-card a:hover {
       background-color: var(--accent-color);
+      transform: scale(1.03);
+    }
+
+    .materi-card a:hover .arrow {
+      transform: translateX(4px);
     }
 
     /* ===== FOOTER ===== */
@@ -228,9 +280,27 @@
       to { opacity: 1; }
     }
 
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+      .materi-card {
+        padding: 20px 16px;
+      }
+      nav {
+        padding: 12px 20px;
+      }
+      .logo {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -261,48 +331,53 @@
   <!-- ===== MATERI LIST ===== -->
   <section class="materi-container">
     <div class="materi-card">
+      <div class="topic-badge">🪨</div>
       <div class="card-image">
         <img src="img/litosfer.jpg" alt="Litosfer" onerror="this.remove(); this.insertAdjacentHTML('afterend', '<div class=&quot;card-fallback&quot;>Gambar tidak tersedia</div>');">
       </div>
       <h3>Litosfer</h3>
       <p>Mempelajari lapisan batuan pembentuk bumi dan dinamika geosfer.</p>
-      <a href="materi/litosfer.html">Buka Materi</a>
+      <a href="materi/litosfer.html">Buka Materi <span class="arrow">→</span></a>
     </div>
 
     <div class="materi-card">
+      <div class="topic-badge">☁️</div>
       <div class="card-image">
         <img src="img/atmosfer.jpg" alt="Atmosfer" onerror="this.remove(); this.insertAdjacentHTML('afterend', '<div class=&quot;card-fallback&quot;>Gambar tidak tersedia</div>');">
       </div>
       <h3>Atmosfer</h3>
       <p>Memahami lapisan udara bumi serta hubungannya dengan iklim dan cuaca.</p>
-      <a href="materi/atmosfer.html">Buka Materi</a>
+      <a href="materi/atmosfer.html">Buka Materi <span class="arrow">→</span></a>
     </div>
 
     <div class="materi-card">
+      <div class="topic-badge">💧</div>
       <div class="card-image">
         <img src="img/hidrosfer.jpg" alt="Hidrosfer" onerror="this.remove(); this.insertAdjacentHTML('afterend', '<div class=&quot;card-fallback&quot;>Gambar tidak tersedia</div>');">
       </div>
       <h3>Hidrosfer</h3>
       <p>Mengenal air di bumi: laut, sungai, dan proses siklus hidrologi.</p>
-      <a href="materi/hidrosfer.html">Buka Materi</a>
+      <a href="materi/hidrosfer.html">Buka Materi <span class="arrow">→</span></a>
     </div>
 
     <div class="materi-card">
+      <div class="topic-badge">🌱</div>
       <div class="card-image">
         <img src="img/lingkungan.jpg" alt="Lingkungan" onerror="this.remove(); this.insertAdjacentHTML('afterend', '<div class=&quot;card-fallback&quot;>Gambar tidak tersedia</div>');">
       </div>
       <h3>Lingkungan Hidup</h3>
       <p>Mempelajari hubungan antara komponen biotik dan abiotik di bumi.</p>
-      <a href="materi/lingkungan.html">Buka Materi</a>
+      <a href="materi/lingkungan.html">Buka Materi <span class="arrow">→</span></a>
     </div>
 
     <div class="materi-card">
+      <div class="topic-badge">👥</div>
       <div class="card-image">
         <img src="img/interaksi.jpg" alt="Interaksi Manusia dan Lingkungan" onerror="this.remove(); this.insertAdjacentHTML('afterend', '<div class=&quot;card-fallback&quot;>Gambar tidak tersedia</div>');">
       </div>
       <h3>Interaksi Manusia dan Lingkungan</h3>
       <p>Menganalisis dampak aktivitas manusia terhadap perubahan lingkungan global.</p>
-      <a href="materi/interaksi-manusia-lingkungan.html">Buka Materi</a>
+      <a href="materi/interaksi-manusia-lingkungan.html">Buka Materi <span class="arrow">→</span></a>
     </div>
   </section>
 
